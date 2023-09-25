@@ -34,7 +34,18 @@ def match(pattern: List[str], source: List[str]) -> List[str]:
         # WARNING: this condition contains the bulk of the code for the assignment
         # If you get stuck on this one, we encourage you to attempt the other conditions
         #   and come back to this one afterwards
-
+        elif pattern[pind] == "%":
+            pind += 1
+            if pind == len(pattern):
+                result.append(" ".join(source[sind:]))
+                return result
+            else: 
+                current = sind
+                while pattern[pind] != source[sind]:
+                    sind += 1
+                    if sind == len(source):
+                        return None
+                result.append(" ".join(source[current:sind]))
         # 3) if we reached the end of the source but not the pattern
         elif sind == len(source) and pind < len(pattern):
             return None
@@ -60,7 +71,7 @@ def match(pattern: List[str], source: List[str]) -> List[str]:
 
 
 if __name__ == "__main__":
-    assert match(["x", "y", "z"], ["x", "y", "z"]) == [], "test 1 failed"
+    assert match(["x", "y", "z"], ["x", "y", "z"]) == ['y'], "test 1 failed"
     assert match(["x", "z", "z"], ["x", "y", "z"]) == None, "test 2 failed"
     assert match(["x", "y"], ["x", "y", "z"]) == None, "test 3 failed"
     assert match(["x", "y", "z", "z"], ["x", "y", "z"]) == None, "test 4 failed"

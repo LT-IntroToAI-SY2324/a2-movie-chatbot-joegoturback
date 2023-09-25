@@ -12,9 +12,9 @@ This assignment is about learning and applying the while loop and iterating thro
 
 ## Reflection Questions
 1. What was difficult for you while completing the match function?
-
+The part that was confusing for me was the 
 
 
 2. Explain how you could use the match function for extracting information from a movie database.
 
-
+The match function could be used to find spcific movies that align with the details the user provided in the search box. For example, if a user were to enter a movie genre "Horror", the match function could find the movie(s) inside the array or dictionary that has the word "horror" in it, and return them to the user. 
