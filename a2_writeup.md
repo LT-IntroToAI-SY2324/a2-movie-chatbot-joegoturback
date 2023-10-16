@@ -12,7 +12,7 @@ This assignment is about learning and applying the while loop and iterating thro
 
 ## Reflection Questions
 1. What was difficult for you while completing the match function?
-The part that was confusing for me was the 
+What I struggled most with creating the fucntion was understanding what the inputs and outputs of this program would be. I wasn't sure with how the source and pattern lists intreracted with each other. 
 
 
 2. Explain how you could use the match function for extracting information from a movie database.
